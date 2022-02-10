@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bidefactory-test"
+    }
+  },
+  "defaultProject": "bidefactory-test",
+  "cli": {
+    "analytics": "07465b22-b571-440b-b4f1-a94e95b23ecc"
+  }
 }

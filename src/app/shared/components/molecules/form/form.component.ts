@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+  inputType = "text"
+  buttonType = "danger";
+  text = "Add";
+  type = "button"
+
   constructor() { }
 
   ngOnInit() {
