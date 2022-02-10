@@ -1,3 +1,7 @@
-<p>
-  button works!
-</p>
+<button
+	[type]="type"
+	[ngClass]="{'btn btn-danger': buttonType == 'danger', 'btn btn-primary':  buttonType == 'primary'}"
+	(onClick)="emitClick()"
+>
+	{{text}}
+</button>
