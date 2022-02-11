@@ -23,7 +23,14 @@ import { HttpClientModule } from '@angular/common/http';
 		ListComponent
 	],
 	exports: [
-		HttpClientModule
+		HttpClientModule,
+		// Atoms
+		ButtonComponent,
+		CheckboxComponent,
+		InputComponent,
+		// Molecules
+		FormComponent,
+		ListComponent
 	],
 	providers: [
 		AllService

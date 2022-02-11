@@ -1,5 +1,5 @@
 export const environment = {
   	ApiUrl: "https://jsonplaceholder.typicode.com",
-  	AppBaseUrl: "",
+  	AppBaseUrl: "https://jior1626.github.io/bidefactory-test",
   	production: true
 };

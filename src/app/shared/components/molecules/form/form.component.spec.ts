@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, DebugElement } from '@angular/core';
 
 import { FormComponent } from './form.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -12,6 +12,7 @@ describe('FormComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
+			schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
 			imports: [HttpClientModule],
 			declarations: [FormComponent]
 		})
