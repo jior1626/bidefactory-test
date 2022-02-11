@@ -1,10 +1,10 @@
-<div class="card">
-	<div class="card-body">
-		<div class="col-lg-6">
-			<app-input [type]="inputType" class="form-control"></app-input>
+<div class="card card-body">
+	<div class="row">		
+		<div class="col-lg-10">
+			<app-input [type]="inputText.inputType" [value]="inputText.valueInput" [placeholder]="inputText.placeholder" (changeValue)="changeValueInput($event)"></app-input>
 		</div>
-		<div class="col-lg-6">
-			<app-button [type]="type" [buttonType]="buttonType" [text]="text"></app-button>
+		<div class="col-lg-2">
+			<app-button [type]="buttonSave.type" [buttonType]="buttonSave.buttonType" [text]="buttonSave.text" (click)="saveAll()"></app-button>
 		</div>
 	</div>
 </div>

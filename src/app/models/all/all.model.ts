@@ -1,6 +1,7 @@
 export interface All {
-    id: number,
+    id?: number,
     title: string,
-    body: string,
-    userId: number
+    body?: string,
+    userId?: number,
+    completed?: boolean
 }

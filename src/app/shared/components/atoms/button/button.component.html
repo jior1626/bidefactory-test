@@ -1,6 +1,7 @@
 <button
 	[type]="type"
-	[ngClass]="{'btn btn-danger': buttonType == 'danger', 'btn btn-primary':  buttonType == 'primary'}"
+	class="btn"
+	[ngClass]="{'btn-danger': buttonType == 'danger', 'btn-primary':  buttonType == 'primary' , 'btn-info':  buttonType == 'info'}"
 	(onClick)="emitClick()"
 >
 	{{text}}

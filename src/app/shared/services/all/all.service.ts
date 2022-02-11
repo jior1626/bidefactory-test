@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { APP } from './../../config/constants';
+import { APP } from '../../../config/constants';
 import { All } from 'src/app/models/all/all.model';
 
 @Injectable({
@@ -14,12 +14,12 @@ export class AllService {
 		private http: HttpClient
 	) { }
 
-	public async getAll() {
-		return await this.http.get<All[]>(`${this.apiEndpoint}/todos`);
+	public getAll() {
+		return this.http.get<All[]>(`${this.apiEndpoint}/todos`).toPromise();
 	}
 
-	public async saveAll(data: All){
-		return await this.http.post<All>(
+	public saveAll(data: All){
+		return this.http.post<All>(
 			`${this.apiEndpoint}/todos`, 
 			data,
 			{
@@ -27,11 +27,11 @@ export class AllService {
 					'Content-type': 'application/json; charset=UTF-8',
 				}
 			}
-		);
+		).toPromise();
 	}
 
-	public async updateAllById(data: All){
-		return await this.http.post<All>(
+	public updateAllById(data: All){
+		return this.http.put<All>(
 			`${this.apiEndpoint}/todos/${data.id}`, 
 			data,
 			{
@@ -39,11 +39,11 @@ export class AllService {
 					'Content-type': 'application/json; charset=UTF-8',
 				}
 			}
-		);
+		).toPromise();
 	}
 
-	public async deleteById(id){
-		return await this.http.delete(`${this.apiEndpoint}/todos/${id}`);
+	public deleteById(id){
+		return this.http.delete(`${this.apiEndpoint}/todos/${id}`).toPromise();
 	}
 
 }

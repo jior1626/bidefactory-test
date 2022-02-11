@@ -6,23 +6,32 @@ import { DebugElement } from '@angular/core';
 import { AdminComponent } from './admin.component';
 
 describe('AdminComponent', () => {
-  let component: AdminComponent;
-  let fixture: ComponentFixture<AdminComponent>;
+	let component: AdminComponent;
+	let fixture: ComponentFixture<AdminComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ AdminComponent ]
-    })
-    .compileComponents();
-  }));
+	beforeEach(async(() => {
+		TestBed.configureTestingModule({
+			declarations: [ AdminComponent ]
+		})
+		.compileComponents();
+	}));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(AdminComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	beforeEach(() => {
+		fixture = TestBed.createComponent(AdminComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
+
+	it('Ver si contiene un titulo', () => {
+		const el = fixture.nativeElement.querySelector('h1');
+		expect(el.innerText).toEqual('Test Angular');
+	});
+
+	it('Ver si la variable newItem se inicializa en null', () => {
+		expect(component.newItem).toEqual(null);
+	});
 });

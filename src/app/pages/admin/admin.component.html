@@ -1,9 +1,15 @@
 <section class="content-wrapper">
-	<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 form-all">
-		<app-form></app-form>
+	<div class="row  mb-5">
+		<h1 class="text-center">Test Angular</h1>
 	</div>
-
-	<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 list-all">
-		<app-list></app-list>
+	<div class="row">
+		<div class="col-lg-12">
+			<app-form (saveData)="submitForm($event)"></app-form>
+		</div>
+	</div>
+	<div class="row mt-5">
+		<div class="col-lg-12">
+			<app-list [newItem]="newItem"></app-list>
+		</div>
 	</div>
 </section>
