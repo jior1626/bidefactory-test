@@ -24,11 +24,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Build and deployment
 
-Run `ng build --prod` to generate the compressed folder of the entire project and thus be able to make the deployment to the server.
+Run `ng build --prod --base-href "https://yourUserGitHub.github.io/name-repo/"` to generate the compressed folder of the entire project and thus be able to make the deployment to the server.
 
-Run `ng build --prod --base-href "https://yourUserGitHub.github.io/name-repo/"`
-
-Run `npx angular-cli-ghpages --dir=dist/name-repo` 
+Run `npx angular-cli-ghpages --dir=dist/name-repo` the server will take what the build generated and relate it to the domain of the page to show it to the client or user.
 
 
 
